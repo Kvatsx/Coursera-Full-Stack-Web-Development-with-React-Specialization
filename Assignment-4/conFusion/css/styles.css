@@ -6,7 +6,7 @@
   margin: 0px auto;
   padding: 50px 0px;
   border-bottom: 1px ridge;
-  min-height: 400px; }
+  min-height: 250px; }
 
 .footer {
   background-color: #D1C4E9;
@@ -40,7 +40,7 @@ body {
 .carousel {
   background: #512DA8; }
   .carousel .carousel-item {
-    height: 300px; }
+    height: 250px; }
     .carousel .carousel-item img {
       position: absolute;
       top: 0;
@@ -52,3 +52,12 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1; }
+
+.modal-header {
+  color: floralwhite;
+  background-color: #512DA8; }
+  .modal-header button {
+    color: floralwhite; }
+
+.modal-body {
+  background-color: #D1C4E9; }
