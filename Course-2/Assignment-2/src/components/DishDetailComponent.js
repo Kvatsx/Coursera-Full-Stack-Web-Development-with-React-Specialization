@@ -2,9 +2,8 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 
-
 function RenderComments({comments}) {
-    if (comments.size == 0) {
+    if (comments.size === 0) {
         return (
             <div></div>
         );
