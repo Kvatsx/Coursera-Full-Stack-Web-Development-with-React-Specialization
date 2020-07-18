@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
+import About from './AboutComponent';
 import Menu from './MenuComponent';
 import DishDetail from './DishDetailComponent';
 import Header from "./HeaderComponent";
@@ -41,7 +42,15 @@ class Main extends Component {
 					dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]} 
 					comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))}
 				/>
-			) 
+			);
+		}
+
+		const AboutPage = () => {
+			return (
+				<About 
+					leaders={this.state.leaders}
+				/>
+			);
 		}
 
 		return (
@@ -49,14 +58,12 @@ class Main extends Component {
 				<Header />
 				<Switch>
 					<Route path="/home" component={HomePage} />
+					<Route path="/aboutus" component={AboutPage} />
 					<Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />} />
 					<Route path="/menu/:dishId" component={DishWithId} />
 					<Route path="/contactus" component={Contact} />
 					<Redirect to="/home" />
 				</Switch>
-				{/* <Menu 
-					 />
-				<DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} /> */}
 				<Footer />
 			</div>
 		);
