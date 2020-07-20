@@ -5,7 +5,7 @@ import Menu from './MenuComponent';
 import DishDetail from './DishDetailComponent';
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
-import Contact from "./ContactContainer";
+import Contact from "./ContactComponent";
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'; 
 import { connect } from 'react-redux';
 
